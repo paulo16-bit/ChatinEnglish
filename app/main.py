@@ -5,8 +5,6 @@ load_dotenv()
 from fastapi import FastAPI, Request
 from app.telegram_client.telegram_client import send_message, get_file
 from app.agent.agent import run_agent
-from app.service.transcriber import transcribe_audio
-import traceback
 
 app = FastAPI()
 
@@ -51,7 +49,6 @@ async def webhook(request: Request):
 
     except Exception as e:
         print("🔥 ERRO NO WEBHOOK:", e)
-        traceback.print_exc()
         return {"ok": False}
     
 
