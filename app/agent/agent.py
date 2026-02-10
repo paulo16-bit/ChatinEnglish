@@ -1,7 +1,7 @@
 # agent/agent.py
-from agent.memory import get_memory, save_message
-from service.llm import call_llm
-from agent.prompt import SYSTEM_PROMPT
+from app.agent.memory import get_memory, save_message
+from app.service.llm import call_llm
+from app.agent.prompt import SYSTEM_PROMPT
 
 def run_agent(chat_id, user_message):
     try:
